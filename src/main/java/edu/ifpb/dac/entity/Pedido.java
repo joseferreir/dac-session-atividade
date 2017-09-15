@@ -1,5 +1,6 @@
-package edu.ifpb.dac;
+package edu.ifpb.dac.entity;
 
+import edu.ifpb.dac.entity.Produto;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
