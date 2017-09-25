@@ -8,6 +8,8 @@ package edu.ifpb.dac.controller;
 import edu.ifpb.dac.entity.Produto;
 import edu.ifpb.dac.servico.ProdutoService;
 import edu.ifpb.dac.util.Mensagem;
+import java.math.BigDecimal;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -49,6 +51,12 @@ public class ProdutoController {
 
     public void setProduto(Produto produto) {
         this.produto = produto;
+    }
+    public Produto buscar(){
+        List<Produto> produtos = service.findAll();
+        if(produtos.isEmpty())
+            return new Produto("produto demo", BigDecimal.ZERO);
+        return produtos.get(0);
     }
     
 

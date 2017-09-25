@@ -1,1 +1,4 @@
-/target/
+*/target/
+app/target/
+*/nb-configuration.xml
+
