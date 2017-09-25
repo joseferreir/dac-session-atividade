@@ -52,12 +52,20 @@ public class ProdutoController {
     public void setProduto(Produto produto) {
         this.produto = produto;
     }
-    public Produto buscar(){
-        List<Produto> produtos = service.findAll();
-        if(produtos.isEmpty())
-            return new Produto("produto demo", BigDecimal.ZERO);
-        return produtos.get(0);
+    public List<Produto> getProdutos(){
+        List<Produto> produtos = service.findAll();     
+        return produtos;
     }
+    public String remove(Produto produto){
+        try {
+            service.remove(produto);
+            mensagem.addMessage(null, "O produto foi removido");
+        } catch (Exception e) {
+             mensagem.addMessage(null, "O produto não removido");
+        }
+        
+        return null;
+    } 
     
 
 }
