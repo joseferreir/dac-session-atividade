@@ -35,10 +35,10 @@ public class ProdutoController {
     public String adicionar() {
         try {
             service.add(produto);
-            mensagem.addMessage("ms", "Produto cadastrado com sucesso:");
+            mensagem.addMessage(null, "Produto cadastrado com sucesso:");
             this.produto = new Produto();
         } catch (Exception e) {
-            mensagem.addMessage("ms", "Produto não cadastrado:");
+            mensagem.addMessage(null, "Produto não cadastrado:");
         }
         return null;
     }

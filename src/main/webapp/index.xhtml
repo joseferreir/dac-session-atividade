@@ -8,7 +8,7 @@
     </h:head>
     <h:body>
         
-         <p:growl id="ms" globalOnly="true" sticky="true"/>
+        <p:growl life="5000" autoUpdate="true" globalOnly="true" sticky="true"/>
         <h:form>
           Descrição:  <h:inputText value="#{produtoController.produto.descricao}"/>
           <br/>
