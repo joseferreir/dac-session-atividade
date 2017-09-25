@@ -3,13 +3,13 @@ services:
   postgres:
     container_name: banco
     build: ./postgres
-    image: ricardojob/banco
+    image: sessionbeans/banco
     ports:
      - "5433:5432"
   web:
     container_name: app
     build: ./app
-    image: ricardojob/webapp
+    image: sessionbeans/webapp
     ports: 
      - "8081:8080"
     links: 
