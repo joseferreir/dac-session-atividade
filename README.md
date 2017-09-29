@@ -8,10 +8,10 @@
 
 **Professor**: Ricardo de Sousa Job
 
-**Alunos**: Isak Furtado, José Ferreira, Michele Oliveira
+**Alunos**: José Ferreira, Michele Oliveira
 
 <h3 align="center">
-  Projeto: Final da disciplina
+  Atividade sobre sessin beans
 </h3>
 
 Para ver detalhes sobre especificaçÕes do projeto juntamente com uma breve
