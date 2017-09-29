@@ -29,6 +29,7 @@ public class ProdutoController {
     private Produto produto;
     @Inject
     private Mensagem mensagem;
+    private boolean edit = false;
 
     public ProdutoController() {
         this.produto = new Produto();
@@ -66,6 +67,31 @@ public class ProdutoController {
         
         return null;
     } 
+     public String update(){
+        try {
+            service.update(produto);
+            mensagem.addMessage(null, "O produto foi atualizado");
+        } catch (Exception e) {
+             mensagem.addMessage(null, "O produto não atualizado");
+        }
+        this.produto = new Produto();
+        
+        return null;
+    } 
+     public void editar(Produto p){
+         this.edit = true;
+         this.produto = p;
+         
+     }
+
+    public boolean isEdit() {
+        return edit;
+    }
+
+    public void setEdit(boolean edit) {
+        this.edit = edit;
+    }
+     
     
 
 }

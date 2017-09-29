@@ -17,7 +17,8 @@
           Preço:  <h:inputText value="#{produtoController.produto.preco}"/>
           <br/>
 
-          <h:commandButton action="#{produtoController.adicionar()}" value="Salvar"/>
+          <h:commandButton action="#{produtoController.adicionar()}" value="Salvar" rendered="#{not produtoController.edit}"/>
+          
           <h:dataTable value="#{produtoController.produtos}" var="produto"
     			
     		>
@@ -41,6 +42,12 @@
 
               <h:column>
                   <h:commandButton action="#{produtoController.remove(produto)}" value="Apagar"/>
+              </h:column>
+               <h:column>
+                   <h:commandButton action="#{produtoController.update()}"  value="atualizar" rendered="#{produtoController.edit}"/>
+              </h:column>
+               <h:column>
+                   <h:commandButton action="#{produtoController.editar(produto)}" value="editar" rendered="#{not produtoController.edit}"/>
               </h:column>
 
     		</h:dataTable>
