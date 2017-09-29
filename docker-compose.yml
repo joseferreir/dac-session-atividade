@@ -9,7 +9,7 @@ services:
     volumes:
      - /postgres/db:/var/lib/postgresql/data/
   web:
-    container_name: app
+    container_name: sessionbeans-app
     build: ./app
     image: sessionbeans/webapp
     ports: 
